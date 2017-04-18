@@ -1,21 +1,12 @@
 import React from 'react';
 
 class Searcher extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            query: '',
-            data: {},
-            inputCleared: false
-
-        };
-    }
 
       render() {
         return (
             <div>
-              <span><input type="text" name="search" placeholder="Type an artist.."/>
-              <button>Search</button>
+              <span><input onChange={this.props.queryChanged} value={this.props.query} type="text" name="search" placeholder="Type an artist.."/>
+              <button onClick={this.props.searchClicked}>Search</button>
             </span>
             </div>
         );
