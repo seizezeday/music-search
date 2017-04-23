@@ -1,0 +1,14 @@
+/*.artist {
+  background-color: red;
+  border-width: thick;
+}*/
+
+
+export default {
+  button: {
+    backgroundColor: 'black'
+  },
+  disabled: {
+    opacity: '.5'
+  }
+}

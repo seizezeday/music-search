@@ -11,13 +11,17 @@ class SearchContainer extends React.Component {
         this.isSearched = false;
         this.state = {
             query: '',
-            searchResults: 'Initial search results'
+            searchResults: {
+              initial: "Search was not done"
+            }
         };
     }
 
+    
+
     searchClicked() {
         this.isSearched = true;
-        spotify_api.search().then((response) => {
+        spotify_api.search(this.state.query).then((response) => {
             this.setState({searchResults: response.data});
         })
 
